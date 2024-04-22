@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Madrid Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Area (Square Meters)</h2>
+    <input class="area"  type="text" id="uiSqM" class="floatLabel" name="SquareM" value="150">
+	<h2>Rooms</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-room-1" name="uiRoom" value="1"/>
+		<label for="radio-room-1">1</label>
+		<input type="radio" id="radio-room-2" name="uiRoom" value="2" checked/>
+		<label for="radio-room-2">2</label>
+		<input type="radio" id="radio-room-3" name="uiRoom" value="3"/>
+		<label for="radio-room-3">3</label>
+		<input type="radio" id="radio-room-4" name="uiRoom" value="4"/>
+		<label for="radio-room-4">4</label>
+		<input type="radio" id="radio-room-5" name="uiRoom" value="5"/>
+		<label for="radio-room-5">5</label>
+	</div>
+	</form>
+<form class="form">
+	<h2>Bathrooms</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+		<label for="radio-bath-5">5</label>
+	</div>
+		<h2>Location</h2>
+	<div>
+  <select class="location" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+		<option>Ibiza</option>
+        <option>Goyar</option>
+  </select>
+</div>
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>
