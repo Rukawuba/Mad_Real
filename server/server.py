@@ -1,10 +1,13 @@
-from flask import Flask, request, jsonify, redirect
+from flask import Flask, request, jsonify, redirect , url_for 
+from flask_cors import CORS
 import util
 
 util.load_saved_artifacts()
 
 
 app = Flask(__name__)
+CORS(app)
+
 
 @app.route("/")
 def redirect_to_prediction():
@@ -41,3 +44,5 @@ def predict_home_price():
 if __name__ == "__main__":
     print('Starting Python Flask Server For Madrid..')
     app.run()
+
+
