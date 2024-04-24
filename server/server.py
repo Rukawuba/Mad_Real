@@ -1,10 +1,14 @@
-from flask import Flask, request, jsonify 
-import util 
+from flask import Flask, request, jsonify , util, url_for
+ 
 
 util.load_saved_artifacts()
 
 
 app = Flask(__name__)
+
+@app.route("/")
+def redirect_to_prediction():
+  return redirect(url_for('predict_home_price'))
 
 
 @app.route('/get_location_names', methods=['GET'])
