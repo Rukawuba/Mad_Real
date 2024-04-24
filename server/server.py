@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify, url_for
-inmport util
+from flask import Flask, request, jsonify, redirect
+import util
 
 util.load_saved_artifacts()
 
